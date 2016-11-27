@@ -18,6 +18,8 @@
 		1D0F1DA91DEAC1D200814423 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DA81DEAC1D200814423 /* DiscoverViewController.m */; };
 		1D0F1DAC1DEAC1E500814423 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DAB1DEAC1E500814423 /* MeViewController.m */; };
 		1D0F1DAF1DEAC74400814423 /* WeiXinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DAE1DEAC74400814423 /* WeiXinCell.m */; };
+		1D0F1DB21DEAD4C300814423 /* WeiXinTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DB11DEAD4C300814423 /* WeiXinTVC.m */; };
+		1D0F1DB51DEAD8CB00814423 /* PushSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DB41DEAD8CB00814423 /* PushSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,10 @@
 		1D0F1DAB1DEAC1E500814423 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		1D0F1DAD1DEAC74400814423 /* WeiXinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiXinCell.h; sourceTree = "<group>"; };
 		1D0F1DAE1DEAC74400814423 /* WeiXinCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiXinCell.m; sourceTree = "<group>"; };
+		1D0F1DB01DEAD4C300814423 /* WeiXinTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiXinTVC.h; sourceTree = "<group>"; };
+		1D0F1DB11DEAD4C300814423 /* WeiXinTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiXinTVC.m; sourceTree = "<group>"; };
+		1D0F1DB31DEAD8CB00814423 /* PushSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushSearchViewController.h; sourceTree = "<group>"; };
+		1D0F1DB41DEAD8CB00814423 /* PushSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,10 @@
 				1D0F1D721DEAC00E00814423 /* AppDelegate.m */,
 				1D0F1DA11DEAC15A00814423 /* WeiXinViewController.h */,
 				1D0F1DA21DEAC15A00814423 /* WeiXinViewController.m */,
+				1D0F1DB31DEAD8CB00814423 /* PushSearchViewController.h */,
+				1D0F1DB41DEAD8CB00814423 /* PushSearchViewController.m */,
+				1D0F1DB01DEAD4C300814423 /* WeiXinTVC.h */,
+				1D0F1DB11DEAD4C300814423 /* WeiXinTVC.m */,
 				1D0F1DAD1DEAC74400814423 /* WeiXinCell.h */,
 				1D0F1DAE1DEAC74400814423 /* WeiXinCell.m */,
 				1D0F1DA41DEAC1AF00814423 /* ContactsViewController.h */,
@@ -293,9 +303,11 @@
 				1D0F1DA91DEAC1D200814423 /* DiscoverViewController.m in Sources */,
 				1D0F1DA31DEAC15A00814423 /* WeiXinViewController.m in Sources */,
 				1D0F1DA61DEAC1AF00814423 /* ContactsViewController.m in Sources */,
+				1D0F1DB51DEAD8CB00814423 /* PushSearchViewController.m in Sources */,
 				1D0F1D731DEAC00E00814423 /* AppDelegate.m in Sources */,
 				1D0F1DAF1DEAC74400814423 /* WeiXinCell.m in Sources */,
 				1D0F1D701DEAC00E00814423 /* main.m in Sources */,
+				1D0F1DB21DEAD4C300814423 /* WeiXinTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
