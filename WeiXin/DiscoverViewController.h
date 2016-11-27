@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DiscoverViewController.h
 //  WeiXin
 //
 //  Created by 鹏 刘 on 2016/11/27.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DiscoverViewController : UIViewController
 
 @end
-

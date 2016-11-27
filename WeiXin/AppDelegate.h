@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WeiXinViewController.h"
+#import "ContactsViewController.h"
+#import "DiscoverViewController.h"
+#import "MeViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) UINavigationController *nav;
+@property (strong, nonatomic) UITabBarController *tab;
 
 @end
 

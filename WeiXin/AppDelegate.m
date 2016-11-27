@@ -15,8 +15,31 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.tab = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
+    self.nav = [[UINavigationController alloc] initWithRootViewController:self.tab];
+    
+    WeiXinViewController *wx = [[WeiXinViewController alloc] init];
+    wx.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemRecents tag:0];
+    
+    ContactsViewController *cv = [[ContactsViewController alloc] init];
+    cv.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:1];
+    
+    DiscoverViewController *dv = [[DiscoverViewController alloc] init];
+    dv.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:2];
+    
+    MeViewController *mv = [[MeViewController alloc] init];
+    mv.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMore tag:3];
+    
+    self.tab.viewControllers = @[wx,cv,dv,mv];
+    self.window.rootViewController = self.nav;
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 
