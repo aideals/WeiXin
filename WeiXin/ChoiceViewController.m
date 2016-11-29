@@ -36,7 +36,7 @@
     [self.activity setCenter:self.view.center];
     self.activity.backgroundColor = [UIColor grayColor];
     self.activity.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-  
+    self.activity.hidesWhenStopped = YES;
     [self.activity startAnimating];
     [self.view addSubview:self.activity];
 }
@@ -44,7 +44,7 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [self.activity stopAnimating];
-    self.activity.hidesWhenStopped = YES;
+    
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
