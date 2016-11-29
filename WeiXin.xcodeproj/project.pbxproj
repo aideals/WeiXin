@@ -20,6 +20,11 @@
 		1D0F1DAF1DEAC74400814423 /* WeiXinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DAE1DEAC74400814423 /* WeiXinCell.m */; };
 		1D0F1DB21DEAD4C300814423 /* WeiXinTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DB11DEAD4C300814423 /* WeiXinTVC.m */; };
 		1D0F1DB51DEAD8CB00814423 /* PushSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DB41DEAD8CB00814423 /* PushSearchViewController.m */; };
+		1D0F1DB81DEAE77800814423 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DB71DEAE77800814423 /* FriendViewController.m */; };
+		1D24DB5A1DED0F1700164049 /* ChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D24DB591DED0F1700164049 /* ChoiceViewController.m */; };
+		1D24DB5D1DED0F8A00164049 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D24DB5C1DED0F8A00164049 /* MusicViewController.m */; };
+		1D9062D21DEBCFE5005CFB94 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9062D11DEBCFE5005CFB94 /* ArticleViewController.m */; };
+		1D9062D51DEBD06B005CFB94 /* PublicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9062D41DEBD06B005CFB94 /* PublicViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,16 @@
 		1D0F1DB11DEAD4C300814423 /* WeiXinTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiXinTVC.m; sourceTree = "<group>"; };
 		1D0F1DB31DEAD8CB00814423 /* PushSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushSearchViewController.h; sourceTree = "<group>"; };
 		1D0F1DB41DEAD8CB00814423 /* PushSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushSearchViewController.m; sourceTree = "<group>"; };
+		1D0F1DB61DEAE77800814423 /* FriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendViewController.h; sourceTree = "<group>"; };
+		1D0F1DB71DEAE77800814423 /* FriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendViewController.m; sourceTree = "<group>"; };
+		1D24DB581DED0F1700164049 /* ChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceViewController.h; sourceTree = "<group>"; };
+		1D24DB591DED0F1700164049 /* ChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceViewController.m; sourceTree = "<group>"; };
+		1D24DB5B1DED0F8A00164049 /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
+		1D24DB5C1DED0F8A00164049 /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
+		1D9062D01DEBCFE5005CFB94 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
+		1D9062D11DEBCFE5005CFB94 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
+		1D9062D31DEBD06B005CFB94 /* PublicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicViewController.h; sourceTree = "<group>"; };
+		1D9062D41DEBD06B005CFB94 /* PublicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +138,16 @@
 				1D0F1DA21DEAC15A00814423 /* WeiXinViewController.m */,
 				1D0F1DB31DEAD8CB00814423 /* PushSearchViewController.h */,
 				1D0F1DB41DEAD8CB00814423 /* PushSearchViewController.m */,
+				1D0F1DB61DEAE77800814423 /* FriendViewController.h */,
+				1D0F1DB71DEAE77800814423 /* FriendViewController.m */,
+				1D24DB581DED0F1700164049 /* ChoiceViewController.h */,
+				1D24DB591DED0F1700164049 /* ChoiceViewController.m */,
+				1D24DB5B1DED0F8A00164049 /* MusicViewController.h */,
+				1D24DB5C1DED0F8A00164049 /* MusicViewController.m */,
+				1D9062D01DEBCFE5005CFB94 /* ArticleViewController.h */,
+				1D9062D11DEBCFE5005CFB94 /* ArticleViewController.m */,
+				1D9062D31DEBD06B005CFB94 /* PublicViewController.h */,
+				1D9062D41DEBD06B005CFB94 /* PublicViewController.m */,
 				1D0F1DB01DEAD4C300814423 /* WeiXinTVC.h */,
 				1D0F1DB11DEAD4C300814423 /* WeiXinTVC.m */,
 				1D0F1DAD1DEAC74400814423 /* WeiXinCell.h */,
@@ -301,13 +326,18 @@
 			files = (
 				1D0F1DAC1DEAC1E500814423 /* MeViewController.m in Sources */,
 				1D0F1DA91DEAC1D200814423 /* DiscoverViewController.m in Sources */,
+				1D24DB5D1DED0F8A00164049 /* MusicViewController.m in Sources */,
 				1D0F1DA31DEAC15A00814423 /* WeiXinViewController.m in Sources */,
+				1D24DB5A1DED0F1700164049 /* ChoiceViewController.m in Sources */,
+				1D9062D21DEBCFE5005CFB94 /* ArticleViewController.m in Sources */,
 				1D0F1DA61DEAC1AF00814423 /* ContactsViewController.m in Sources */,
 				1D0F1DB51DEAD8CB00814423 /* PushSearchViewController.m in Sources */,
 				1D0F1D731DEAC00E00814423 /* AppDelegate.m in Sources */,
 				1D0F1DAF1DEAC74400814423 /* WeiXinCell.m in Sources */,
 				1D0F1D701DEAC00E00814423 /* main.m in Sources */,
+				1D0F1DB81DEAE77800814423 /* FriendViewController.m in Sources */,
 				1D0F1DB21DEAD4C300814423 /* WeiXinTVC.m in Sources */,
+				1D9062D51DEBD06B005CFB94 /* PublicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +553,7 @@
 				1D0F1D9A1DEAC00F00814423 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D0F1D9B1DEAC00F00814423 /* Build configuration list for PBXNativeTarget "WeiXinTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +562,7 @@
 				1D0F1D9D1DEAC00F00814423 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D0F1D9E1DEAC00F00814423 /* Build configuration list for PBXNativeTarget "WeiXinUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +571,7 @@
 				1D0F1DA01DEAC00F00814423 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
