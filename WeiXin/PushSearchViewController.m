@@ -31,8 +31,17 @@
 {
     self.sb = [[UISearchBar alloc] initWithFrame:CGRectMake(75, 0, 300, 45)];
     self.sb.placeholder = @"搜索";
-    [self.sb resignFirstResponder];
     self.sb.delegate = self;
+    self.sb.showsCancelButton = YES;
+    
+    for (UIView *view in [[[self.sb subviews] objectAtIndex:0] subviews]) {
+        if ([view isKindOfClass:[NSClassFromString(@"UINavigationButton") class]]) {
+            UIButton *cancel = (UIButton *)view;
+            [cancel setTitle:@"取消" forState:UIControlStateNormal];
+            [cancel addTarget:self action:@selector(dimissTheView:) forControlEvents:UIControlEventTouchDown];
+        }
+    }
+    
     [self.navigationController.navigationBar addSubview:self.sb];
 }
 
@@ -74,14 +83,8 @@
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
-    self.sb.showsCancelButton = YES;
-    for (UIView *view in [[[searchBar subviews] objectAtIndex:0] subviews]) {
-        if ([view isKindOfClass:[NSClassFromString(@"UINavigationButton") class]]) {
-            UIButton *cancel = (UIButton *)view;
-            [cancel setTitle:@"取消" forState:UIControlStateNormal];
-            [cancel addTarget:self action:@selector(dimissTheView:) forControlEvents:UIControlEventTouchDown];
-        }
-    }
+    
+    
 }
 
 - (IBAction)dimissTheView:(id)sender
