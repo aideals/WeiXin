@@ -10,7 +10,7 @@
 #import "ChoiceViewController.h"
 #import "MusicViewController.h"
 
-@interface FriendViewController ()<UISearchBarDelegate>
+@interface FriendViewController ()
 @property (strong, nonatomic) UIButton *button;
 @property (copy, nonatomic) NSArray *titleArr;
 @end
@@ -20,11 +20,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.sb = [[UISearchBar alloc] init];
-    self.sb.delegate = self;
-    self.sb.placeholder = @"搜索朋友圈";
-    self.navigationItem.titleView = self.sb;
-    
     [self friendButton];
 }
 
@@ -34,6 +29,7 @@
     self.titleArr = [[NSArray alloc] initWithObjects:@"一周朋友精选",@"朋友分享的音乐", nil];
     for (int i = 0; i < self.titleArr.count; i ++) {
         self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        self.button.layer.cornerRadius = 4.0;
         self.button.frame = CGRectMake(30 + i * 185, 125, 120, 30);
         self.button.backgroundColor = [UIColor colorWithRed:0.9 green:1.5 blue:2.9 alpha:1.0];
         title = [self.titleArr objectAtIndex:i];

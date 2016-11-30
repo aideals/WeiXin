@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PublicViewController : UIViewController
-@property (strong, nonatomic) UISearchBar *sb;
+
 @end

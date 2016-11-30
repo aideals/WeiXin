@@ -1,46 +1,45 @@
 //
-//  ChoiceViewController.m
+//  MySelectViewController.m
 //  WeiXin
 //
 //  Created by 鹏 刘 on 2016/11/29.
 //  Copyright © 2016年 鹏 刘. All rights reserved.
 //
 
-#import "ChoiceViewController.h"
+#import "MySelectViewController.h"
 
-@interface ChoiceViewController ()<UIWebViewDelegate>
+@interface MySelectViewController ()<UIWebViewDelegate>
 @property (strong, nonatomic) UIWebView *web;
 @property (strong, nonatomic) UIActivityIndicatorView *activity;
 @end
 
-@implementation ChoiceViewController
+@implementation MySelectViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self choiceWeb];
-    [self activitySent];
+    [self selectWeb];
+    [self selectActivity];
 }
 
-- (void)choiceWeb
+- (void)selectWeb
 {
     self.web = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.163.com"]];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://www.baidu.com"]];
     [self.web loadRequest:request];
-    self.web.delegate = self;
     [self.view addSubview:self.web];
 }
 
-- (void)activitySent
+- (void)selectActivity
 {
-    self.activity = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 32.0f, 32.0f)];
+    self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [self.activity setCenter:self.view.center];
     self.activity.backgroundColor = [UIColor grayColor];
-    self.activity.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+    self.activity.frame = CGRectMake(0, 0, 32.0f, 32.0f);
     self.activity.hidesWhenStopped = YES;
     [self.view addSubview:self.activity];
+    
 }
-
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
@@ -50,13 +49,10 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [self.activity stopAnimating];
-    
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     [self.activity stopAnimating];
 }
-
-
 @end

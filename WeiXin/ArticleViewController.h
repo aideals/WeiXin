@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ArticleViewController : UIViewController
-@property (strong, nonatomic) UISearchBar *sb;
+
 @end

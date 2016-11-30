@@ -1,46 +1,44 @@
 //
-//  ChoiceViewController.m
+//  FoodViewController.m
 //  WeiXin
 //
 //  Created by 鹏 刘 on 2016/11/29.
 //  Copyright © 2016年 鹏 刘. All rights reserved.
 //
 
-#import "ChoiceViewController.h"
+#import "FoodViewController.h"
 
-@interface ChoiceViewController ()<UIWebViewDelegate>
+@interface FoodViewController ()<UIWebViewDelegate>
 @property (strong, nonatomic) UIWebView *web;
 @property (strong, nonatomic) UIActivityIndicatorView *activity;
 @end
 
-@implementation ChoiceViewController
+@implementation FoodViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self choiceWeb];
-    [self activitySent];
+    [self foodWeb];
+    [self foodActivity];
 }
 
-- (void)choiceWeb
+- (void)foodWeb
 {
     self.web = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.163.com"]];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://www.163.com"]];
     [self.web loadRequest:request];
-    self.web.delegate = self;
     [self.view addSubview:self.web];
 }
 
-- (void)activitySent
+- (void)foodActivity
 {
-    self.activity = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 32.0f, 32.0f)];
+    self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.activity.frame = CGRectMake(0, 0, 32.0f, 32.0f);
     [self.activity setCenter:self.view.center];
-    self.activity.backgroundColor = [UIColor grayColor];
-    self.activity.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+    self.activity.backgroundColor = [UIColor whiteColor];
     self.activity.hidesWhenStopped = YES;
     [self.view addSubview:self.activity];
 }
-
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
@@ -50,13 +48,11 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [self.activity stopAnimating];
-    
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     [self.activity stopAnimating];
 }
-
 
 @end
