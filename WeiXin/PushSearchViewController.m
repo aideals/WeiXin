@@ -22,13 +22,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self pushSearch];
+    [self buttonArray];
+ 
+}
+
+- (void)pushSearch
+{
     self.sb = [[UISearchBar alloc] initWithFrame:CGRectMake(75, 0, 300, 45)];
     self.sb.placeholder = @"搜索";
-    self.sb.showsCancelButton = YES;
+    [self.sb resignFirstResponder];
     self.sb.delegate = self;
     [self.navigationController.navigationBar addSubview:self.sb];
-    
+}
+
+- (void)buttonArray
+{
     self.buttonTitle = [[NSArray alloc] initWithObjects:@"朋友圈",@"文章",@"公众号",nil];
     for (int i = 0; i < self.buttonTitle.count; i ++) {
         self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -42,7 +51,6 @@
         [self.view addSubview:self.button];
         
     }
-    
 }
 
 - (IBAction)theSecond:(UIButton *)sender
@@ -67,8 +75,7 @@
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
     self.sb.showsCancelButton = YES;
-    [self.sb resignFirstResponder];
-    for (UIView *view in [[[self.sb subviews] objectAtIndex:0] subviews]) {
+    for (UIView *view in [[[searchBar subviews] objectAtIndex:0] subviews]) {
         if ([view isKindOfClass:[NSClassFromString(@"UINavigationButton") class]]) {
             UIButton *cancel = (UIButton *)view;
             [cancel setTitle:@"取消" forState:UIControlStateNormal];
