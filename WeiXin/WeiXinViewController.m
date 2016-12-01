@@ -10,10 +10,9 @@
 #import "WeiXinTVC.h"
 #import "PushSearchViewController.h"
 
-@interface WeiXinViewController ()<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic,strong) UISearchBar *sb;
-@property (nonatomic,strong) UITableView *tv;
-
+@interface WeiXinViewController ()<UISearchBarDelegate,UISearchDisplayDelegate,UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic, strong) UISearchBar *sb;
+@property (nonatomic, strong) UISearchDisplayController *searchDisplayController;
 @end
 
 @implementation WeiXinViewController
@@ -30,6 +29,13 @@
     self.sb.placeholder = @"搜索";
     self.sb.delegate = self;
     
+    self.searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:self.sb contentsController:self];
+    self.searchDisplayController.searchResultsDataSource = self;
+    self.searchDisplayController.searchResultsDelegate = self;
+    self.searchDisplayController.delegate = self;
+    [self.searchDisplayController setActive:YES animated:YES];
+    
+    
     [self.parentViewController.view addSubview:self.sb];
 }
 
@@ -41,14 +47,16 @@
     [self presentViewController:nav animated:YES completion:nil];
 }
 
-- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [self.sb resignFirstResponder];
-    PushSearchViewController *psvc = [[PushSearchViewController alloc] initWithNibName:nil bundle:nil];
-    [self.navigationController pushViewController:psvc animated:YES];
-    
-    return NO;
+    return 0;
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 0;
+}
+
 
 
 @end

@@ -12,6 +12,7 @@
 #import "PublicViewController.h"
 
 @interface PushSearchViewController ()<UISearchBarDelegate>
+
 @property (strong, nonatomic) UISearchBar *sb;
 @property (strong, nonatomic) UIButton *button;
 @property (copy, nonatomic) NSArray *buttonTitle;
@@ -29,20 +30,19 @@
 
 - (void)pushSearch
 {
-    self.sb = [[UISearchBar alloc] initWithFrame:CGRectMake(75, 0, 300, 45)];
+    self.sb = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 60, self.view.bounds.size.width, 55)];
     self.sb.placeholder = @"搜索";
     self.sb.delegate = self;
-    self.sb.showsCancelButton = YES;
     
-    for (UIView *view in [[[self.sb subviews] objectAtIndex:0] subviews]) {
+    
+    /*for (UIView *view in [[[self.sb subviews] objectAtIndex:0] subviews]) {
         if ([view isKindOfClass:[NSClassFromString(@"UINavigationButton") class]]) {
             UIButton *cancel = (UIButton *)view;
             [cancel setTitle:@"取消" forState:UIControlStateNormal];
             [cancel addTarget:self action:@selector(dimissTheView:) forControlEvents:UIControlEventTouchDown];
         }
-    }
+    }*/
     
-    [self.navigationController.navigationBar addSubview:self.sb];
 }
 
 - (void)buttonArray
@@ -66,7 +66,7 @@
 {
     if ([sender.titleLabel.text isEqualToString:@"朋友圈"]) {
         FriendViewController *fvc = [[FriendViewController alloc] init];
-        fvc.sb.placeholder = @"搜索朋友圈";
+        //fvc.sb.placeholder = @"搜索朋友圈";
         [self.navigationController pushViewController:fvc animated:YES];
         
     }
