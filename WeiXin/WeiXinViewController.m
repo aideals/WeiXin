@@ -33,7 +33,6 @@
     self.searchDisplayController.searchResultsDataSource = self;
     self.searchDisplayController.searchResultsDelegate = self;
     self.searchDisplayController.delegate = self;
-    [self.searchDisplayController setActive:YES animated:YES];
     
     
     [self.parentViewController.view addSubview:self.sb];
