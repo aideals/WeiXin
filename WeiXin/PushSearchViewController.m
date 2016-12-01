@@ -65,17 +65,17 @@
 - (IBAction)theSecond:(UIButton *)sender
 {
     if ([sender.titleLabel.text isEqualToString:@"朋友圈"]) {
-        FriendViewController *fvc = [[FriendViewController alloc] init];
+        FriendViewController *fvc = [[FriendViewController alloc] initWithNibName:nil bundle:nil];
         //fvc.sb.placeholder = @"搜索朋友圈";
         [self.navigationController pushViewController:fvc animated:YES];
         
     }
     else if ([sender.titleLabel.text isEqualToString:@"文章"]) {
-        ArticleViewController *avc = [[ArticleViewController alloc] init];
+        ArticleViewController *avc = [[ArticleViewController alloc] initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:avc animated:YES];
     }
     else if ([sender.titleLabel.text isEqualToString:@"公众号"]) {
-        PublicViewController *pvc = [[PublicViewController alloc] init];
+        PublicViewController *pvc = [[PublicViewController alloc] initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:pvc animated:YES];
     }
 

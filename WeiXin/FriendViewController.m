@@ -44,11 +44,11 @@
 - (IBAction)goToTheSecondView:(UIButton *)sender
 {
     if ([sender.titleLabel.text isEqualToString:@"一周朋友精选"]) {
-        ChoiceViewController *cvc = [[ChoiceViewController alloc] init];
+        ChoiceViewController *cvc = [[ChoiceViewController alloc] initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:cvc animated:YES];
     }
     else if ([sender.titleLabel.text isEqualToString:@"朋友分享的音乐"]) {
-        MusicViewController *mvc = [[MusicViewController alloc] init];
+        MusicViewController *mvc = [[MusicViewController alloc] initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:mvc animated:YES];
     }
 

@@ -52,15 +52,15 @@
 - (IBAction)goToTheSecondView:(UIButton *)sender
 {
     if ([sender.titleLabel.text isEqualToString:@"我的精选"]) {
-        MySelectViewController *mvc = [[MySelectViewController alloc] init];
+        MySelectViewController *mvc = [[MySelectViewController alloc] initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:mvc animated:YES];
     }
     else if ([sender.titleLabel.text isEqualToString:@"汽车资讯"]) {
-        CarViewController *car = [[CarViewController alloc] init];
+        CarViewController *car = [[CarViewController alloc] initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:car animated:YES];
     }
     else if ([sender.titleLabel.text isEqualToString:@"美食探索"]) {
-        FoodViewController *food = [[FoodViewController alloc] init];
+        FoodViewController *food = [[FoodViewController alloc] initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:food animated:YES];
     }
 
