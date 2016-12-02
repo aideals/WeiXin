@@ -21,8 +21,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     self.tab = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
-    self.nav = [[UINavigationController alloc] initWithRootViewController:self.tab];
-    
+   
     WeiXinViewController *wx = [[WeiXinViewController alloc] init];
     wx.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemRecents tag:0];
     
@@ -35,10 +34,12 @@
     MeViewController *mv = [[MeViewController alloc] init];
     mv.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMore tag:3];
     
-    self.tab.viewControllers = @[wx,cv,dv,mv];
-    self.window.rootViewController = self.nav;
-    [self.window makeKeyAndVisible];
+    self.nav = [[UINavigationController alloc] initWithRootViewController:wx];
+    self.window.rootViewController = self.tab;
     
+    self.tab.viewControllers = @[self.nav,cv,dv,mv];
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

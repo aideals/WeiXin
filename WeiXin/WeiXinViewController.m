@@ -25,8 +25,8 @@
    [super viewDidLoad];
     
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add:)];
-    self.parentViewController.navigationItem.rightBarButtonItem = rightButton;
-    self.parentViewController.navigationItem.title = @"微信";
+    self.navigationItem.rightBarButtonItem = rightButton;
+    self.navigationItem.title = @"微信";
 
     self.sb = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 63, self.view.bounds.size.width, 45)];
     self.sb.placeholder = @"搜索";
