@@ -10,10 +10,12 @@
 #import "WeiXinTVC.h"
 #import "PushSearchViewController.h"
 
-@interface WeiXinViewController ()<UISearchBarDelegate,UISearchDisplayDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface WeiXinViewController ()<UISearchDisplayDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UISearchBar *sb;
 @property (nonatomic, strong) UISearchDisplayController *searchDisplayController;
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, copy) NSArray *data;
+@property (nonatomic, copy) NSArray *filterData;
 @end
 
 @implementation WeiXinViewController
@@ -26,16 +28,12 @@
     self.parentViewController.navigationItem.rightBarButtonItem = rightButton;
     self.parentViewController.navigationItem.title = @"微信";
 
-    self.sb = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 50, self.view.bounds.size.width, 45)];
+    self.sb = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 63, self.view.bounds.size.width, 45)];
     self.sb.placeholder = @"搜索";
     self.sb.delegate = self;
     [self.parentViewController.view addSubview:self.sb];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height - 64)];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.tableHeaderView = self.sb;
-    [self.parentViewController.view addSubview:self.tableView];
+    
     
     self.searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:self.sb contentsController:self];
     self.searchDisplayController.searchResultsDataSource = self;
@@ -52,14 +50,36 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    if (tableView == self.tableView) {
+        return [self.data count];
+    }
+    else {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self contains [cd] %@",self.searchDisplayController.searchBar.text];
+        self.filterData = [[NSArray alloc] initWithArray:[self.data filteredArrayUsingPredicate:predicate]];
+        return [self.filterData count];
+    }
+
+
+
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 0;
-}
+    static NSString *cellID = @"reuseString";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    
+    if (tableView == self.tableView) {
+        return self.data[indexPath.row];
+    }
+    else {
+        return self.filterData[indexPath.row];
+    }
 
+}
 
 
 @end
