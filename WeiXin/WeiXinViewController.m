@@ -33,6 +33,10 @@
     self.sb.delegate = self;
     [self.parentViewController.view addSubview:self.sb];
     
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 110, self.view.bounds.size.width, self.view.bounds.size.height - 110)];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.parentViewController.view addSubview:self.tableView];
     
     
     self.searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:self.sb contentsController:self];
