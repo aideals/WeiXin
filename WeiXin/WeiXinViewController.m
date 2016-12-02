@@ -13,6 +13,7 @@
 @interface WeiXinViewController ()<UISearchBarDelegate,UISearchDisplayDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UISearchBar *sb;
 @property (nonatomic, strong) UISearchDisplayController *searchDisplayController;
+@property (nonatomic, strong) UITableView *tableView;
 @end
 
 @implementation WeiXinViewController
@@ -25,17 +26,21 @@
     self.parentViewController.navigationItem.rightBarButtonItem = rightButton;
     self.parentViewController.navigationItem.title = @"微信";
 
-    self.sb = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 63, self.view.bounds.size.width, 45)];
+    self.sb = [[UISearchBar alloc] init];
+    [self.sb setAutocorrectionType:UITextAutocorrectionTypeNo];
     self.sb.placeholder = @"搜索";
     self.sb.delegate = self;
+    [self.parentViewController.view addSubview:self.sb];
+    
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height - 64)];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.tableHeaderView = self.sb;
+    [self.parentViewController.view addSubview:self.tableView];
     
     self.searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:self.sb contentsController:self];
     self.searchDisplayController.searchResultsDataSource = self;
     self.searchDisplayController.searchResultsDelegate = self;
-    self.searchDisplayController.delegate = self;
-    
-    
-    [self.parentViewController.view addSubview:self.sb];
 }
 
 - (IBAction)add:(id)sender
