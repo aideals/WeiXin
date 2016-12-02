@@ -26,8 +26,7 @@
     self.parentViewController.navigationItem.rightBarButtonItem = rightButton;
     self.parentViewController.navigationItem.title = @"微信";
 
-    self.sb = [[UISearchBar alloc] init];
-    [self.sb setAutocorrectionType:UITextAutocorrectionTypeNo];
+    self.sb = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 50, self.view.bounds.size.width, 45)];
     self.sb.placeholder = @"搜索";
     self.sb.delegate = self;
     [self.parentViewController.view addSubview:self.sb];

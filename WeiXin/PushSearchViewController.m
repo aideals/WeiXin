@@ -66,7 +66,7 @@
 {
     if ([sender.titleLabel.text isEqualToString:@"朋友圈"]) {
         FriendViewController *fvc = [[FriendViewController alloc] initWithNibName:nil bundle:nil];
-        //fvc.sb.placeholder = @"搜索朋友圈";
+        //fvc.sb.placeholder = @"搜索朋友圈"; 值没传过去
         [self.navigationController pushViewController:fvc animated:YES];
         
     }
