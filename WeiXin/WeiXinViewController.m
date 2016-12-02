@@ -31,13 +31,12 @@
     self.sb = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 63, self.view.bounds.size.width, 45)];
     self.sb.placeholder = @"搜索";
     self.sb.delegate = self;
-    [self.view addSubview:self.sb];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 110, self.view.bounds.size.width, self.view.bounds.size.height - 110 )];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
-    
+    self.tableView.tableHeaderView = self.sb;
     
     self.searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:self.sb contentsController:self];
     self.searchDisplayController.searchResultsDataSource = self;
@@ -46,7 +45,7 @@
 
 - (IBAction)add:(id)sender
 {
-    WeiXinTVC *wt = [[WeiXinTVC alloc] init];
+    WeiXinTVC *wt = [[WeiXinTVC alloc] initWithNibName:nil bundle:nil];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:wt];
     
     [self presentViewController:nav animated:YES completion:nil];
@@ -62,9 +61,6 @@
         self.filterData = [[NSArray alloc] initWithArray:[self.data filteredArrayUsingPredicate:predicate]];
         return [self.filterData count];
     }
-
-
-
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
