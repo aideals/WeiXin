@@ -7,15 +7,15 @@
 //
 
 #import "WeiXinViewController.h"
-#import "WeiXinTVC.h"
 #import "PushSearchViewController.h"
+#import "WeiXinTBC.h"
 
-@interface WeiXinViewController ()<UISearchDisplayDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface WeiXinViewController ()<UISearchDisplayDelegate,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 @property (nonatomic, strong) UISearchBar *sb;
 @property (nonatomic, strong) UISearchDisplayController *searchDisplayController;
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, copy) NSArray *data;
-@property (nonatomic, copy) NSArray *filterData;
+@property (nonatomic, strong) NSArray *tableArr;
+
 @end
 
 @implementation WeiXinViewController
@@ -24,6 +24,7 @@
 {
    [super viewDidLoad];
     
+    self.tableArr = [[NSArray alloc] initWithObjects:@"发起群聊",@"添加朋友",@"扫一扫",@"收付款", nil];
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add:)];
     self.navigationItem.rightBarButtonItem = rightButton;
     self.navigationItem.title = @"微信";
@@ -43,43 +44,29 @@
     self.searchDisplayController.searchResultsDelegate = self;
 }
 
-- (IBAction)add:(id)sender
+- (IBAction)add:(UIBarButtonItem *)sender
 {
-    WeiXinTVC *wt = [[WeiXinTVC alloc] initWithNibName:nil bundle:nil];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:wt];
+    WeiXinTBC *weixin = [[WeiXinTBC alloc] initWithNibName:nil bundle:nil];
+    [super setEditing:YES animated:YES];
     
-    [self presentViewController:nav animated:YES completion:nil];
+        weixin.view.frame = CGRectMake(250, 100, 110, 180);
+        [self.view addSubview:weixin.view];
+    
+    
+   
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (tableView == self.tableView) {
-        return [self.data count];
-    }
-    else {
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self contains [cd] %@",self.searchDisplayController.searchBar.text];
-        self.filterData = [[NSArray alloc] initWithArray:[self.data filteredArrayUsingPredicate:predicate]];
-        return [self.filterData count];
-    }
+   return 0;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *cellID = @"reuseString";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-    }
-    
-    if (tableView == self.tableView) {
-        return self.data[indexPath.row];
-    }
-    else {
-        return self.filterData[indexPath.row];
-    }
 
-}
 
 
 @end

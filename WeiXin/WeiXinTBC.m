@@ -1,26 +1,24 @@
 //
-//  WeiXinTVC.m
+//  WeiXinTBC.m
 //  WeiXin
 //
-//  Created by 鹏 刘 on 2016/11/27.
+//  Created by 鹏 刘 on 2016/12/3.
 //  Copyright © 2016年 鹏 刘. All rights reserved.
 //
 
-#import "WeiXinTVC.h"
+#import "WeiXinTBC.h"
 
-@interface WeiXinTVC ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic, copy) NSArray *nameArray;
+@interface WeiXinTBC ()
+@property (nonatomic, copy) NSArray *data;
 @end
 
-@implementation WeiXinTVC
+@implementation WeiXinTBC
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.nameArray = [[NSArray alloc] initWithObjects:@"发起群聊",@"添加朋友",@"扫一扫",@"收付款", nil];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.frame = CGRectMake(200, 60, 90, 100);
+    
+    self.data = [[NSArray alloc] initWithObjects:@"发起群聊",@"添加朋友",@"扫一扫",@"收付款", nil];
 }
 
 
@@ -34,21 +32,21 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    return [self.nameArray count];
+    return [self.data count];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellID = @"cellReuse";
+    static NSString *cellID = @"reuse";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell.textLabel.text = self.data[indexPath.row];
     }
-
-    cell.textLabel.text = self.nameArray[indexPath.row];
+    
     return cell;
-
 }
 
 

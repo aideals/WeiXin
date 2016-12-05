@@ -18,7 +18,6 @@
 		1D0F1DA91DEAC1D200814423 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DA81DEAC1D200814423 /* DiscoverViewController.m */; };
 		1D0F1DAC1DEAC1E500814423 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DAB1DEAC1E500814423 /* MeViewController.m */; };
 		1D0F1DAF1DEAC74400814423 /* WeiXinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DAE1DEAC74400814423 /* WeiXinCell.m */; };
-		1D0F1DB21DEAD4C300814423 /* WeiXinTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DB11DEAD4C300814423 /* WeiXinTVC.m */; };
 		1D0F1DB51DEAD8CB00814423 /* PushSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DB41DEAD8CB00814423 /* PushSearchViewController.m */; };
 		1D0F1DB81DEAE77800814423 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F1DB71DEAE77800814423 /* FriendViewController.m */; };
 		1D24DB5A1DED0F1700164049 /* ChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D24DB591DED0F1700164049 /* ChoiceViewController.m */; };
@@ -26,6 +25,7 @@
 		1D24DB601DED730800164049 /* MySelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D24DB5F1DED730800164049 /* MySelectViewController.m */; };
 		1D24DB631DED741800164049 /* CarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D24DB621DED741800164049 /* CarViewController.m */; };
 		1D24DB661DED745B00164049 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D24DB651DED745B00164049 /* FoodViewController.m */; };
+		1D25BD4B1DF2AAF0007C5A11 /* WeiXinTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25BD4A1DF2AAF0007C5A11 /* WeiXinTBC.m */; };
 		1D9062D21DEBCFE5005CFB94 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9062D11DEBCFE5005CFB94 /* ArticleViewController.m */; };
 		1D9062D51DEBD06B005CFB94 /* PublicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9062D41DEBD06B005CFB94 /* PublicViewController.m */; };
 /* End PBXBuildFile section */
@@ -71,8 +71,6 @@
 		1D0F1DAB1DEAC1E500814423 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		1D0F1DAD1DEAC74400814423 /* WeiXinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiXinCell.h; sourceTree = "<group>"; };
 		1D0F1DAE1DEAC74400814423 /* WeiXinCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiXinCell.m; sourceTree = "<group>"; };
-		1D0F1DB01DEAD4C300814423 /* WeiXinTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiXinTVC.h; sourceTree = "<group>"; };
-		1D0F1DB11DEAD4C300814423 /* WeiXinTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiXinTVC.m; sourceTree = "<group>"; };
 		1D0F1DB31DEAD8CB00814423 /* PushSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushSearchViewController.h; sourceTree = "<group>"; };
 		1D0F1DB41DEAD8CB00814423 /* PushSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushSearchViewController.m; sourceTree = "<group>"; };
 		1D0F1DB61DEAE77800814423 /* FriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendViewController.h; sourceTree = "<group>"; };
@@ -87,6 +85,8 @@
 		1D24DB621DED741800164049 /* CarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarViewController.m; sourceTree = "<group>"; };
 		1D24DB641DED745B00164049 /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
 		1D24DB651DED745B00164049 /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
+		1D25BD491DF2AAF0007C5A11 /* WeiXinTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiXinTBC.h; sourceTree = "<group>"; };
+		1D25BD4A1DF2AAF0007C5A11 /* WeiXinTBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiXinTBC.m; sourceTree = "<group>"; };
 		1D9062D01DEBCFE5005CFB94 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
 		1D9062D11DEBCFE5005CFB94 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
 		1D9062D31DEBD06B005CFB94 /* PublicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicViewController.h; sourceTree = "<group>"; };
@@ -145,6 +145,8 @@
 				1D0F1D721DEAC00E00814423 /* AppDelegate.m */,
 				1D0F1DA11DEAC15A00814423 /* WeiXinViewController.h */,
 				1D0F1DA21DEAC15A00814423 /* WeiXinViewController.m */,
+				1D25BD491DF2AAF0007C5A11 /* WeiXinTBC.h */,
+				1D25BD4A1DF2AAF0007C5A11 /* WeiXinTBC.m */,
 				1D0F1DB31DEAD8CB00814423 /* PushSearchViewController.h */,
 				1D0F1DB41DEAD8CB00814423 /* PushSearchViewController.m */,
 				1D0F1DB61DEAE77800814423 /* FriendViewController.h */,
@@ -163,8 +165,6 @@
 				1D24DB651DED745B00164049 /* FoodViewController.m */,
 				1D9062D31DEBD06B005CFB94 /* PublicViewController.h */,
 				1D9062D41DEBD06B005CFB94 /* PublicViewController.m */,
-				1D0F1DB01DEAD4C300814423 /* WeiXinTVC.h */,
-				1D0F1DB11DEAD4C300814423 /* WeiXinTVC.m */,
 				1D0F1DAD1DEAC74400814423 /* WeiXinCell.h */,
 				1D0F1DAE1DEAC74400814423 /* WeiXinCell.m */,
 				1D0F1DA41DEAC1AF00814423 /* ContactsViewController.h */,
@@ -344,6 +344,7 @@
 				1D24DB5D1DED0F8A00164049 /* MusicViewController.m in Sources */,
 				1D24DB631DED741800164049 /* CarViewController.m in Sources */,
 				1D24DB661DED745B00164049 /* FoodViewController.m in Sources */,
+				1D25BD4B1DF2AAF0007C5A11 /* WeiXinTBC.m in Sources */,
 				1D0F1DA31DEAC15A00814423 /* WeiXinViewController.m in Sources */,
 				1D24DB5A1DED0F1700164049 /* ChoiceViewController.m in Sources */,
 				1D9062D21DEBCFE5005CFB94 /* ArticleViewController.m in Sources */,
@@ -354,7 +355,6 @@
 				1D0F1DAF1DEAC74400814423 /* WeiXinCell.m in Sources */,
 				1D0F1D701DEAC00E00814423 /* main.m in Sources */,
 				1D0F1DB81DEAE77800814423 /* FriendViewController.m in Sources */,
-				1D0F1DB21DEAD4C300814423 /* WeiXinTVC.m in Sources */,
 				1D9062D51DEBD06B005CFB94 /* PublicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
