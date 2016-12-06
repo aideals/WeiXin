@@ -47,13 +47,17 @@
 - (IBAction)add:(UIBarButtonItem *)sender
 {
     WeiXinTBC *weixin = [[WeiXinTBC alloc] initWithNibName:nil bundle:nil];
-    [super setEditing:YES animated:YES];
+    weixin.view.frame = CGRectMake(250, 100, 110, 180);
     
-        weixin.view.frame = CGRectMake(250, 100, 110, 180);
+    BOOL state = [self.view.subviews containsObject:weixin.view];
+    
+    if (state == NO) {
         [self.view addSubview:weixin.view];
-    
-    
-   
+        NSLog(@"%@",self.view.subviews);
+    }
+    else {
+         [weixin.view removeFromSuperview];
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
