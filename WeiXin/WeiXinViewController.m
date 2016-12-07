@@ -24,7 +24,6 @@
 {
    [super viewDidLoad];
     
-    self.tableArr = [[NSArray alloc] initWithObjects:@"发起群聊",@"添加朋友",@"扫一扫",@"收付款", nil];
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add:)];
     self.navigationItem.rightBarButtonItem = rightButton;
     self.navigationItem.title = @"微信";
@@ -58,7 +57,8 @@
       
   }
     else {
-        [weixin.view removeFromSuperview];
+        id v = [self.view viewWithTag:tag];
+        [v removeFromSuperview];
     }
 }
 
