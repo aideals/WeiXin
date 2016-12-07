@@ -46,17 +46,19 @@
 
 - (IBAction)add:(UIBarButtonItem *)sender
 {
-    WeiXinTBC *weixin = [[WeiXinTBC alloc] initWithNibName:nil bundle:nil];
-    weixin.view.frame = CGRectMake(250, 100, 110, 180);
+    WeiXinTBC *weixin;
+    NSInteger tag = 15;
     
-    BOOL state = [self.view.subviews containsObject:weixin.view];
-    
-    if (state == NO) {
+    if ([self.view viewWithTag:tag] == nil) {
+        weixin = [[WeiXinTBC alloc] initWithNibName:nil bundle:nil];
+        weixin.view.frame = CGRectMake(250, 70, 120, 175);
+        weixin.view.tag = tag;
         [self.view addSubview:weixin.view];
-        NSLog(@"%@",self.view.subviews);
-    }
+        NSLog(@"%@",self.view);
+      
+  }
     else {
-         [weixin.view removeFromSuperview];
+        [weixin.view removeFromSuperview];
     }
 }
 
